@@ -4269,6 +4269,14 @@ figcaption {
   height: 100%;
 
 }
+@media screen and (max-width: 950px){
+  .header37_image-wrapper.home{
+    height: 500px;
+  }
+  .header37_image.shopify{
+    left: 38% !important;
+  }
+}
 
 .header37_image {
   width: auto;
