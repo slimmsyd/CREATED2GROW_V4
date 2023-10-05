@@ -6465,7 +6465,7 @@ figcaption {
   text-transform: uppercase;
   
   background-color: #fff;
-  border: .07rem dashed #00e04b;
+  border: .07rem solid #00e04b;
   border-radius: 6px;
   align-items: center;
   margin-top: 17px;
