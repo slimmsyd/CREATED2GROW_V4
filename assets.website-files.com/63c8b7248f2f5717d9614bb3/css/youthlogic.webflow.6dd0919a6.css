@@ -5248,7 +5248,7 @@ figcaption {
 }
 
 .logo6_wrapper:hover {
-  background-color: #dbdbff;
+  /* background-color: #dbdbff; */
 }
 
 .logo6_wrapper.home {
