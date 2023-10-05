@@ -6294,7 +6294,7 @@ figcaption {
   height: 44px;
   opacity: 1 !important;
   background-color: #fff;
-  border: .08rem dashed #00e04b;
+  border: .08rem solid #00e04b;
   border-radius: 6px;
   flex-direction: column;
   justify-content: flex-end;
