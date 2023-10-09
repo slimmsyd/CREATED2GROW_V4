@@ -3495,7 +3495,12 @@ figcaption {
 .text-align-center {
   text-align: center;
 }
-
+@media screen and (max-width: 749px){
+.text-align-center-mobile
+{
+  text-align: center !important;
+}
+}
 .text-size-small {
   
   font-family: Fivosansmodern, sans-serif;
@@ -3731,15 +3736,18 @@ figcaption {
   padding-left: 5%;
   padding-right: 5%;
 }
+.padding-global what-is-yl{
+  padding-top:2rem;
+}
 
 .padding-global.header-hero {
   padding-left: 2%;
   padding-right: 2%;
 }
 
-.padding-section-medium {
-  padding-top: 4rem;
-  padding-bottom: 5rem;
+.padding-section-medium { 
+  padding-top: 5rem;
+  padding-bottom: 0rem;
 }
 
 .padding-section-large, .padding-section-large.header {
@@ -4236,7 +4244,7 @@ figcaption {
 }
 
 .logo3_logo {
-  max-height: 3.5rem;
+  max-height: 7.5rem;
   border-radius: 0;
 }
 
@@ -6796,7 +6804,7 @@ figcaption {
 
   .padding-section-medium {
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 0rem;
   }
 
   .padding-section-large {
@@ -7189,6 +7197,13 @@ figcaption {
     grid-row-gap: 4rem;
     grid-template-columns: 1fr;
     grid-auto-flow: row;
+    justify-content: center;
+  }
+  .cta1_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .button-group-2, .button-group-2.allwidth {
@@ -7494,7 +7509,7 @@ figcaption {
 
   .padding-section-medium {
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 0rem;
   }
 
   .padding-section-large {
@@ -7539,7 +7554,7 @@ figcaption {
   }
 
   .logo3_logo {
-    max-height: 3rem;
+    max-height: 7.5rem;
   }
 
   .header36_component, .header37_component {
@@ -8094,7 +8109,7 @@ figcaption {
   }
 
   .section_header36.connecting {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
   }
 
   .header36_component {
