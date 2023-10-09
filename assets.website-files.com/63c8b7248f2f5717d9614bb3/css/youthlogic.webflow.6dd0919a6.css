@@ -3735,6 +3735,7 @@ figcaption {
 .padding-global {
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 10%;
 }
 .padding-global what-is-yl{
   padding-top:2rem;
@@ -4272,6 +4273,7 @@ figcaption {
 
 .section_header36.connecting {
   padding-bottom: 0;
+  padding-top: 10%;
   overflow: hidden;
 }
 
@@ -4301,7 +4303,7 @@ figcaption {
 
 .header36_image {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   max-height: 60rem;
   opacity: 1;
   object-fit: contain;
@@ -8858,3 +8860,18 @@ padding-top: 15px;
 
 /* FOOTER */
 /* FOOTER */
+
+
+
+/* SERVICES PAGE CSS */
+.header1_image-wrapper.home { 
+  width: 500px;
+  height: 200px;
+}
+@media screen and (max-width: 749px){ 
+  .header1_image-wrapper.home { 
+    width: 500px;
+    height: 405px;
+  }
+}
+/* SERVICES PAGE CSS */
