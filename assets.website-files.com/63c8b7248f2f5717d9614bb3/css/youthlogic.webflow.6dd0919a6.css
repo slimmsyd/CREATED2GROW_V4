@@ -268,6 +268,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden !important;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
@@ -6794,6 +6795,7 @@ figcaption {
 
   .heading-11.home.top {
     font-size: 9.6rem;
+    width: 390px;
   }
 
   .layout241_component.speaking {
@@ -8406,7 +8408,7 @@ figcaption {
   }
 
   .header-image.relative, .header-image.relative.pink, .header-image.brain {
-    max-width: 97%;
+    max-width: 90%;
   }
 
   .testimonial6_component {
@@ -9084,7 +9086,7 @@ padding-top: 15px;
 
 /* SERVICES PAGE CSS */
 .header1_image-wrapper.home { 
-  width: 500px;
+  width: 100% !important;
   height: 200px;
 }
 @media screen and (max-width: 749px){ 
