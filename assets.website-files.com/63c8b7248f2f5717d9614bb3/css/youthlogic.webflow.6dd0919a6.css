@@ -5016,6 +5016,15 @@ figcaption {
   transform: translate3d(0, 0, 48px);
 }
 
+
+@media screen and (min-width: 950px)
+{ 
+  .header-image.brain {
+       transform: translateY(-60px) !important;
+
+  }
+}
+
 .header-image.work {
   z-index: 0;
   width: 100%;
