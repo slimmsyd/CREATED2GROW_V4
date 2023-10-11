@@ -4798,14 +4798,14 @@ figcaption {
 }
 
 .header80_component {
-  height: 80vhs;
+  height: 80vh;
   position: relative;
 }
 
 .header80_content-wrapper {
-  height: 100vh;
+  height: 70vh;
   position: -webkit-sticky;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   overflow: hidden;
 }
@@ -4893,7 +4893,7 @@ figcaption {
 
 .header80_content {
   height: 100%;
-  max-width: 48rem;
+  max-width: 60rem;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
@@ -4911,6 +4911,10 @@ figcaption {
   bottom: 0%;
   left: 0%;
   right: 0%;
+}
+.text-padding-top
+{ 
+  padding: 4rem 0rem;
 }
 
 .layout22_component {
@@ -5192,7 +5196,7 @@ figcaption {
 .heading-11.home {
   letter-spacing: -2px;
   
-  line-height: .9;
+  line-height: .5;
 }
 
 .heading-11.home.small {
@@ -7320,7 +7324,7 @@ figcaption {
   }
 
   .heading-11.home {
-    font-size: 5rem;
+    font-size: 3.4rem;
     line-height: .9;
   }
 
@@ -7814,14 +7818,19 @@ figcaption {
   }
 
   .header80_component {
-    height: 150vh;
+    height: 80vh;
+    margin-top: 5rem;
   }
 
   .header80_content-wrapper {
     flex-direction: column;
     align-items: flex-start;
+    overflow: visible !important;
   }
-
+  
+.text-padding-top{
+  padding: 4rem 0.5rem;
+}
   .header80_image-wrapper.is-image-1 {
     width: 30vw;
   }
@@ -8384,7 +8393,6 @@ figcaption {
   }
 
   .section_header80 {
-    background-color: #f6f6ff;
   }
 
   .header80_image-wrapper {
@@ -9287,8 +9295,8 @@ top: 400px
   }
 
 .small-text{
-  font-size: 28px;
-  font-weight: 200;
+  font-size: 36px;
+  font-weight: 400;
   letter-spacing: 0px;
 }
 .no-padding{
@@ -9309,6 +9317,11 @@ top: 400px
     display: flex;
     flex-direction: column;
     position: relative;
+    height: 80%;
+   }
+   .team-flex h3 { 
+    font-size: 36px;
+    padding-bottom: 1.3rem;
    }
    .team-flex .black{
     color: #1A1919 !important;
