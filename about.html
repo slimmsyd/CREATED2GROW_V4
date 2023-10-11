@@ -42,18 +42,394 @@
 
 
 
+  <style>
+    body .transition {
+      display: block
+    }
+
+    .w-editor .transition {
+      display: none;
+    }
+
+    .no-scroll-transition {
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
+
+
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Check if the device supports touch events
+      if ('ontouchstart' in window || navigator.maxTouchPoints) {
+        // If it does, hide the custom cursor with class "cursor"
+        var customCursor = document.querySelector('.cursor');
+        if (customCursor) {
+          customCursor.style.display = 'none';
+        }
+      }
+    });
+  </script>
+
+
+
+  <style>
+    .load_grid {
+      display: grid;
+    }
+  </style>
 </head>
   <body class="body-2">
     <div class="page-wrapper">
+      <div class="global-styles w-embed">
+        <style>
+          /* Get rid of top margin on first element in any rich text element */
+          .w-richtext> :not(div):first-child,
+          .w-richtext>div:first-child> :first-child {
+            margin-top: 0 !important;
+          }
+
+          /* Get rid of bottom margin on last element in any rich text element */
+          .w-richtext>:last-child,
+          .w-richtext ol li:last-child,
+          .w-richtext ul li:last-child {
+            margin-bottom: 0 !important;
+          }
+
+          /* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+          /*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+
+          /* Prevent all click and hover interaction with an element */
+          .pointer-events-off {
+            pointer-events: none;
+          }
+
+          /* Enables all click and hover interaction with an element */
+          .pointer-events-on {
+            pointer-events: auto;
+          }
+
+          /* Snippet enables you to add class of div-square which creates and maintains a 1:1 dimension of a div.*/
+          .div-square::after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+          }
+
+          /*Hide focus outline for main content element*/
+          main:focus-visible {
+            outline: -webkit-focus-ring-color auto 0px;
+          }
+
+          /* Make sure containers never lose their center alignment*/
+          .container-medium,
+          .container-small,
+          .container-large {
+            margin-right: auto !important;
+            margin-left: auto !important;
+          }
+
+          /*Reset selects, buttons, and links styles*/
+          .w-input,
+          .w-select,
+          a {
+            color: inherit;
+            text-decoration: inherit;
+            font-size: inherit;
+          }
+
+          /*Apply "..." after 3 lines of text */
+          .text-style-3lines {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+          }
+
+          /* Apply "..." after 2 lines of text */
+          .text-style-2lines {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
+
+          /* Apply "..." at 100% width */
+          .truncate-width {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          /* Removes native scrollbar */
+          .no-scrollbar {
+            -ms-overflow-style: none; // IE 10+
+            overflow: -moz-scrollbars-none; // Firefox
+          }
+
+          .no-scrollbar::-webkit-scrollbar {
+            display: none; // Safari and Chrome
+          }
+
+          /* Adds inline flex display */
+          .display-inlineflex {
+            display: inline-flex;
+          }
+
+          /* These classes are never overwritten */
+          .hide {
+            display: none !important;
+          }
+
+          @media screen and (max-width: 991px) {
+
+            .hide,
+            .hide-tablet {
+              display: none !important;
+            }
+          }
+
+          @media screen and (max-width: 767px) {
+            .hide-mobile-landscape {
+              display: none !important;
+            }
+          }
+
+          @media screen and (max-width: 479px) {
+            .hide-mobile {
+              display: none !important;
+            }
+          }
+
+          .margin-0 {
+            margin: 0rem !important;
+          }
+
+          .padding-0 {
+            padding: 0rem !important;
+          }
+
+          .spacing-clean {
+            padding: 0rem !important;
+            margin: 0rem !important;
+          }
+
+          .margin-top {
+            margin-right: 0rem !important;
+            margin-bottom: 0rem !important;
+            margin-left: 0rem !important;
+          }
+
+          .padding-top {
+            padding-right: 0rem !important;
+            padding-bottom: 0rem !important;
+            padding-left: 0rem !important;
+          }
+
+          .margin-right {
+            margin-top: 0rem !important;
+            margin-bottom: 0rem !important;
+            margin-left: 0rem !important;
+          }
+
+          .padding-right {
+            padding-top: 0rem !important;
+            padding-bottom: 0rem !important;
+            padding-left: 0rem !important;
+          }
+
+          .margin-bottom {
+            margin-top: 0rem !important;
+            margin-right: 0rem !important;
+            margin-left: 0rem !important;
+          }
+
+          .padding-bottom {
+            padding-top: 0rem !important;
+            padding-right: 0rem !important;
+            padding-left: 0rem !important;
+          }
+
+          .margin-left {
+            margin-top: 0rem !important;
+            margin-right: 0rem !important;
+            margin-bottom: 0rem !important;
+          }
+
+          .padding-left {
+            padding-top: 0rem !important;
+            padding-right: 0rem !important;
+            padding-bottom: 0rem !important;
+          }
+
+          .margin-horizontal {
+            margin-top: 0rem !important;
+            margin-bottom: 0rem !important;
+          }
+
+          .padding-horizontal {
+            padding-top: 0rem !important;
+            padding-bottom: 0rem !important;
+          }
+
+          .margin-vertical {
+            margin-right: 0rem !important;
+            margin-left: 0rem !important;
+          }
+
+          .padding-vertical {
+            padding-right: 0rem !important;
+            padding-left: 0rem !important;
+          }
+        </style>
+      </div>
       <div class="cursor-wrap">
         <div class="w-embed">
+          <style>
+            .cursor-wrap {
+              pointer-events: none;
+            }
+
+            body .cursor {
+              opacity: 0;
+            }
+
+            body:hover .cursor {
+              opacity: 1;
+            }
+          </style>
         </div>
         <div class="cursor">
           <div class="div-block-cursor"><img src="https://assets.website-files.com/63c8b7248f2f5717d9614bb3/64dc49a53ec6291b90cb9d88_Group.svg" loading="lazy" data-w-id="79756eb0-4f48-036a-fa3b-98bddc19a6ea" alt="" class="cursor-image" /><img src="https://assets.website-files.com/63c8b7248f2f5717d9614bb3/64dc49a5ffbe944ccee7bd2a_Layer 2.svg" loading="lazy" data-w-id="79756eb0-4f48-036a-fa3b-98bddc19a6eb" alt="" class="cursor-image finger" /></div>
         </div>
       </div>
       <main class="main-wrapper">
- 
+        <div class="top-banner_component">
+          <div data-w-id="756d999d-2c06-df5f-67ed-89144071c8af" class="top-banner-text_wrapper">
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+            <div class="top-banner-text_item">
+              <div class="font-secondary text-weight-medium text-size-small">MADE BY AND FOR GEN Z</div>
+              <div class="top-banner-text_line"></div>
+            </div>
+          </div>
+        </div>
         <div data-animation="default" class="navbar22_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="all" data-w-id="43fc91f8-dfcd-54d5-aa97-c3970ad5f48c" role="banner" data-duration="0">
           <div class="navbar22_container"><a href="index.html" class="navbar22_logo-link w-nav-brand">
             <img src="assets.website-files.com\Images\Logos\Asset 2PERFECTLOG.svg" loading="lazy" alt="" class="navbar22_logo desktop" />
@@ -61,7 +437,27 @@
           
             <div class="navbar22_link-wrapper">
               <div id="underline-animation__wrap" class="underline-animation_wrap"><a id="letter-wrap" href="index.html" class="underline-animation">HOME</a>
-             
+                <div class="w-embed">
+                  <style>
+                    .underline-animation::after {
+                      content: '';
+                      position: absolute;
+                      width: 100%;
+                      transform: scaleX(0);
+                      height: 1px;
+                      bottom: 0;
+                      left: 0;
+                      background-color: #3131ff;
+                      transform-origin: bottom right;
+                      transition: transform 0.15s ease-out;
+                    }
+
+                    .underline-animation:hover::after {
+                      transform: scaleX(1);
+                      transform-origin: bottom left;
+                    }
+                  </style>
+                </div>
               </div>
               <div class="underline-animation_wrap"><a href="about.html" aria-current="page" class="underline-animation w--current">ABOUT</a></div>
               <div class="underline-animation_wrap"><a href="services.html" class="underline-animation">CAPABILITIES</a></div>
@@ -75,7 +471,41 @@
                   <div class="navbar22_menu-left">
                     <div class="navbar22_menu-links-wrapper">
                       <div id="w-node-b9b845c8-73f7-2b47-b26a-d55a39018982-0ad5f48c" class="tween-block"><a href="index.html" id="letter-wrap" class="letter-wrap w-nav-link">Home</a>
-                    
+                        <div class="w-embed">
+                          <style>
+                            .letter-wrap {
+                              display: inline-block;
+                              position: relative;
+                            }
+
+                            .letter-wrap * {
+                              pointer-events: none;
+                            }
+
+                            .letter-wrap__word {
+                              display: inline-flex;
+                              position: relative;
+                              overflow: hidden;
+                            }
+
+                            .letter-wrap__char {
+                              display: inline-block;
+                              position: relative;
+                              text-transform: uppercase;
+                            }
+
+                            .letter-wrap__char-inner {
+                              display: inline-block;
+                            }
+
+                            .letter-wrap__char-inner:after {
+                              content: attr(data-letter);
+                              position: absolute;
+                              top: 100%;
+                              left: 0;
+                            }
+                          </style>
+                        </div>
                       </div>
                       <div id="w-node-_2235bc32-c78a-a6a7-3b8b-0d7acc0fb8dc-0ad5f48c" class="tween-block"><a href="about.html" id="letter-wrap" aria-current="page" class="letter-wrap w-nav-link w--current">about</a></div>
                       <div id="w-node-bbac9d7c-c6c5-09cc-daa4-053e9dbfca80-0ad5f48c" class="tween-block"><a href="services.html" id="letter-wrap" class="letter-wrap w-nav-link">capabilities</a></div>
@@ -173,8 +603,11 @@
               <div class="team-flex">
                 <div class="header37_image-wrapper home">
               
+
                   <img style ="    transform: translateY(-45px);"src="assets.website-files.com/Global Assets/C2G Logo.png" alt="Shopify Icon" class="header37_image shopify">
                   
+                  <!-- <img src="assets.website-files.com/Global Assets/C2G Logo.png" alt="Blue Z icon" class="header37_image smiley pink z" /> -->
+                
                 </div>
               </div>
               <div class="team-flex">
@@ -288,10 +721,50 @@
 
 
 
-  
+    <script>
+      let transitionTrigger = $(".transition-trigger");
+      let introDurationMS = 1600;
+      let exitDurationMS = 1200;
+      let excludedClass = "no-transition";
+
+      // On Page Load
+      if (transitionTrigger.length > 0) {
+        transitionTrigger.click();
+        $("body").addClass("no-scroll-transition");
+        setTimeout(() => {
+          $("body").removeClass("no-scroll-transition");
+        }, introDurationMS);
+      }
+      // On Link Click
+      $("a").on("click", function(e) {
+        if ($(this).prop("hostname") == window.location.host && $(this).attr("href").indexOf("#") === -1 &&
+          !$(this).hasClass(excludedClass) && $(this).attr("target") !== "_blank" && transitionTrigger.length > 0) {
+          e.preventDefault();
+          $("body").addClass("no-scroll-transition");
+          let transitionURL = $(this).attr("href");
+          transitionTrigger.click();
+          setTimeout(function() {
+            window.location = transitionURL;
+          }, exitDurationMS);
+        }
+      });
+      // On Back Button Tap
+      window.onpageshow = function(event) {
+        if (event.persisted) {
+          window.location.reload()
+        }
+      };
+      // Hide Transition on Window Width Resize
+      setTimeout(() => {
+        $(window).on("resize", function() {
+          setTimeout(() => {
+            $(".transition").css("display", "none");
+          }, 50);
+        });
+      }, introDurationMS);
+    </script>
 
 
-   
 
 
 
@@ -307,7 +780,61 @@
 
 
 
- 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      // Code that runs on pageload
+      gsap.to(".load_grid-item", {
+        opacity: 0,
+        duration: 0.001,
+        stagger: {
+          amount: 0.5,
+          from: "random"
+        },
+        onComplete: () => {
+          gsap.set(".load_grid", {
+            display: "none"
+          });
+        }
+      });
+
+      // Code that runs on click of a link
+      $(document).ready(function() {
+        $("a").on("click", function(e) {
+          if (
+            $(this).prop("hostname") === window.location.host &&
+            $(this).attr("href").indexOf("#") === -1 &&
+            $(this).attr("target") !== "_blank") {
+            e.preventDefault();
+            let destination = $(this).attr("href");
+            gsap.set(".load_grid", {
+              display: "grid"
+            });
+            gsap.fromTo(
+              ".load_grid-item", {
+                opacity: 0
+              }, {
+                opacity: 1,
+                duration: 0.001,
+                stagger: {
+                  amount: 0.5,
+                  from: "random"
+                }, //you can also try a from: "start" or "end" -- get creative!
+                onComplete: () => {
+                  window.location = destination;
+                }
+              }
+            );
+          }
+        });
+
+        // On click of the back button
+        window.onpageshow = function(event) {
+          if (event.persisted) {
+            window.location.reload();
+          }
+        }
+      });
+    </script>
 
 
 
@@ -323,6 +850,54 @@
 
 
 
+
+    <!-- BEGIN TWEENMAX V1 TEXT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" type="text/javascript"></script>
+    <script>
+      const letterWrapClass = 'letter-wrap';
+      const letterWrapElements = document.getElementsByClassName(letterWrapClass);
+      [...letterWrapElements].forEach(el => {
+        letterWrap(el, letterWrapClass);
+        letterAnimation(el, letterWrapClass);
+      });
+
+      function letterWrap(el, cls) {
+        const words = el.textContent.split(' ');
+        const letters = [];
+        cls = cls || 'letter-wrap'
+        words.forEach(word => {
+          let html = '';
+          for (var letter in word) {
+            html += `
+        <span class="${cls}__char">
+          <span class="${cls}__char-inner" data-letter="${word[letter]}">
+            ${word[letter]}
+          </span>
+        </span>
+      `;
+          };
+          let wrappedWords = `<span class="${cls}__word">${html}</span>`;
+          letters.push(wrappedWords);
+        });
+        return el.innerHTML = letters.join(' ');
+      }
+
+      function letterAnimation(el, cls) {
+        const tl = new TimelineMax({
+          paused: true
+        });
+        const characters = el.querySelectorAll(`.${cls}__char-inner`);
+        const duration = el.hasAttribute('data-duration') ? el.dataset.duration : 0.6;
+        const stagger = el.hasAttribute('data-stagger') ? el.dataset.stagger : 0.05;
+        el.animation = tl.staggerTo(characters, duration, {
+          y: '-100%',
+          delay: 0.07,
+          ease: Power2.easeOut
+        }, stagger);
+        el.addEventListener('mouseenter', (event) => event.currentTarget.animation.play());
+        el.addEventListener('mouseout', (event) => el.animation.pause(0)());
+      }
+    </script>
   </body>
 
 </html>
