@@ -4545,6 +4545,8 @@ figcaption {
 .header37_image-wrapper.home {
   position: relative;
   height: 100%;
+  display: flex;
+  justify-content: center;
 
 }
 @media screen and (max-width: 1080px){
@@ -4998,7 +5000,7 @@ figcaption {
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
-  align-items: center;
+  align-items: self-start;
   display: grid;
 }
 
@@ -7417,10 +7419,14 @@ figcaption {
 
   .cta1_component {
     min-height: auto;
-    grid-row-gap: 4rem;
-    grid-template-columns: 1fr;
+    /* grid-row-gap: 4rem;
+    grid-template-columns: 1fr; */
     grid-auto-flow: row;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
   }
   .cta1_content{
     display: flex;
