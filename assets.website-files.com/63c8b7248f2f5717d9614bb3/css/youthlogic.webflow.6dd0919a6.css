@@ -9103,7 +9103,7 @@ padding-top: 15px;
   width: 100% !important;
   height: 200px;
 }
-@media screen and (max-width: 749px){ 
+@media screen and (max-width: 755px){ 
   .header1_image-wrapper.home { 
     width: 500px;
     height: 405px;
