@@ -4798,7 +4798,7 @@ figcaption {
 }
 
 .header80_component {
-  height: 300vh;
+  height: 80vhs;
   position: relative;
 }
 
@@ -5190,7 +5190,7 @@ figcaption {
 }
 
 .heading-11.home {
-  letter-spacing: -7px;
+  letter-spacing: -2px;
   
   line-height: .9;
 }
@@ -7320,7 +7320,7 @@ figcaption {
   }
 
   .heading-11.home {
-    font-size: 7rem;
+    font-size: 5rem;
     line-height: .9;
   }
 
@@ -9102,3 +9102,271 @@ padding-top: 15px;
   }
 }
 /* SERVICES PAGE CSS */
+
+
+
+
+/* ABOUT PAGE CSS */
+
+
+.dark-mode .culture-card 
+{ 
+  background: rgba(55, 54, 54, 0.31);
+  box-shadow: none;
+}
+.dark-mode .culture-card p, .dark-mode .team-flex p, .dark-mode .black  { 
+  color: #fff !important;
+}
+
+
+
+
+
+.culture-container
+ { 
+    width: 800px;
+    margin: 0 auto;
+ }
+ .culture-container-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+
+ /* CULTURE CARD SECTION */
+
+ .culture-section{
+    position: relative;
+ }
+ .culture-wrapper
+  { 
+    padding: 39px 24px;
+
+  }
+  .left-large-circle
+  {
+    border-radius: 50%;
+    position: absolute;
+width: 381px;
+height: 387px;
+left: calc((90% - 900px) / 2);
+
+top: -90px;
+background: linear-gradient(-45deg, #00FFFF55, #11E40DA1, #00FFFF55, #11E40DA1);
+
+animation: gradient 15s ease infinite;
+background-size: 400% 400%;
+
+
+  }
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.right-large-circle
+{
+    border-radius: 50%;
+    position: absolute;
+width: 406px;
+height: 412px;
+left: calc((90% + 500px) / 2);
+
+background: linear-gradient(-45deg, #00FFFFD1,#00FFFFD1, #11E40DA1, #11E40DA1);
+animation: gradient 15s ease infinite;
+opacity: 0.61;
+transition: background-image 1s ease-in-out;
+
+
+}
+.small-circle
+{
+    animation: up-and-down 10s infinite linear;
+
+}
+@keyframes up-and-down {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-40px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+.small-circle.one{
+    position: absolute;
+width: 22px;
+height: 22px;
+left: 162px;
+top: -30px;
+background: #C89DDD;
+border-radius: 50px;
+}
+.small-circle.two{
+    position: absolute;
+width: 22px;
+height: 22px;
+left: 323px;
+top: 500px;
+background: #11E40D;
+border-radius: 50px;
+}
+.small-circle.three{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 1008px;
+    top: -100px;
+    background: #11E40D;
+    border-radius: 50px;
+}
+.small-circle.four{
+    position: absolute;
+width: 22px;
+height: 22px;
+left: 1310px;
+background: #C89DDD;
+border-radius: 50px;
+top: 400px
+}
+
+ .culture-card{ 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 523px;
+    height: 100%;
+    padding-bottom: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 49px 47px 21px rgba(113, 110, 110, 0.25);
+    border-radius: 6px;
+    margin: 0 auto;
+ }
+ .culture-row
+  { 
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+  }
+  .culture-row.one p { 
+    color: #5DEC5A;
+  }
+
+  .culture-image-container {
+    width: 40px;
+    height: 21px;
+  }
+  .culture-image-container img { 
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+ /* CULTURE CARD SECTION */
+
+
+
+ /* TEAM SECTION */
+  .team-section
+  {
+    /* height: 60vh; */
+    padding: 2rem 0rem;
+  }
+
+.small-text{
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 0px;
+}
+.no-padding{
+  padding: 0px;
+}
+  .team-grid
+   { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    width: 900px;
+    margin: 0 auto;
+    /* height: 50vh; */
+
+
+   }
+   .team-flex{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+   }
+   .team-flex .black{
+    color: #1A1919 !important;
+   }
+  
+   .team-flex:nth-child(1):after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 1px;
+    background-color: #B7B7B7;
+    position: absolute;
+    right: 0;
+    top: 0;
+   }
+
+ /* TEAM SECTION */
+
+ @media screen and (max-width: 1023px){
+
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .mobile-nav{
+        margin-bottom: 0px;
+    }
+    .culture-container{
+        width: auto !important;
+        text-align: center;
+    }
+    .team-grid{
+        gap: 15px;
+        grid-template-columns: repeat(1, 1fr);
+        width: 475px;
+        
+    }
+    .team-flex{
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+    .team-flex:nth-child(1)::after{
+        display: none;
+    }
+ }
+ @media screen and (max-width: 749px){
+    .culture-card{
+        width: 370px;
+    }
+    .team-flex{
+        width: 370px;
+        margin: 0 auto;
+    }
+    .team-grid{
+        width: auto;
+    }
+ }
+/* ABOUT PAGE CSS */
