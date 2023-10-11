@@ -5196,7 +5196,7 @@ figcaption {
 .heading-11.home {
   letter-spacing: -2px;
   
-  line-height: .5;
+  /* line-height: .5; */
 }
 
 .heading-11.home.small {
