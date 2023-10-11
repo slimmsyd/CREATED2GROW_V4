@@ -5042,11 +5042,8 @@ figcaption {
 
 .header-image.relative {
   transform-style: preserve-3d;
-  position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+
+  width: 500px;
   transform: translate3d(0, 0, 120px);
 }
 
@@ -9101,7 +9098,10 @@ padding-top: 15px;
 /* SERVICES PAGE CSS */
 .header1_image-wrapper.home { 
   width: 100% !important;
-  height: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 755px){ 
   .header1_image-wrapper.home { 
