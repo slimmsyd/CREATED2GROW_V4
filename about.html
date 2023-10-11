@@ -288,113 +288,10 @@
 
 
 
-    <script>
-      let transitionTrigger = $(".transition-trigger");
-      let introDurationMS = 1600;
-      let exitDurationMS = 1200;
-      let excludedClass = "no-transition";
-
-      // On Page Load
-      if (transitionTrigger.length > 0) {
-        transitionTrigger.click();
-        $("body").addClass("no-scroll-transition");
-        setTimeout(() => {
-          $("body").removeClass("no-scroll-transition");
-        }, introDurationMS);
-      }
-      // On Link Click
-      $("a").on("click", function(e) {
-        if ($(this).prop("hostname") == window.location.host && $(this).attr("href").indexOf("#") === -1 &&
-          !$(this).hasClass(excludedClass) && $(this).attr("target") !== "_blank" && transitionTrigger.length > 0) {
-          e.preventDefault();
-          $("body").addClass("no-scroll-transition");
-          let transitionURL = $(this).attr("href");
-          transitionTrigger.click();
-          setTimeout(function() {
-            window.location = transitionURL;
-          }, exitDurationMS);
-        }
-      });
-      // On Back Button Tap
-      window.onpageshow = function(event) {
-        if (event.persisted) {
-          window.location.reload()
-        }
-      };
-      // Hide Transition on Window Width Resize
-      setTimeout(() => {
-        $(window).on("resize", function() {
-          setTimeout(() => {
-            $(".transition").css("display", "none");
-          }, 50);
-        });
-      }, introDurationMS);
-    </script>
+  
 
 
-    <script src="https://assets.website-files.com/63c8b7248f2f5717d9614bb3/641a7d3a35973782045dc9ad_6410aee547ea85f098550470_lenis-offbrand-v1.txt"></script>
-
-    <script>
-      if (!document.querySelector("html").classList.contains('w-editor')) {
-        const lenis = new Lenis({
-          duration: 1.2,
-          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-          direction: 'vertical', // vertical, horizontal
-          gestureDirection: 'vertical', // vertical, horizontal, both
-          smooth: true,
-          smoothTouch: false,
-          touchMultiplier: 2,
-          infinite: false,
-        })
-
-        // Get scroll value. This is just for testing purposes. Delete this if you're not using the scroll value for anything.
-        lenis.on('scroll', ({
-          scroll,
-          limit,
-          velocity,
-          direction,
-          progress
-        }) => {
-          console.log({
-            scroll,
-            limit,
-            velocity,
-            direction,
-            progress
-          })
-        })
-
-        function raf(time) {
-          lenis.raf(time)
-          requestAnimationFrame(raf)
-        }
-
-        // Grab all elements that have a "data-target" attribute
-        const scrollButtons = document.querySelectorAll('[data-target]');
-
-        // For each element, listen to a "click" event
-        scrollButtons.forEach(button => {
-          button.addEventListener('click', e => {
-            e.preventDefault();
-
-            // get the DOM element by the ID (data-target value)
-            var target = button.dataset.target,
-              $el = document.getElementById(target.replace('#', ''));
-
-            // Use lenis.scrollTo() to scroll the page to the right element
-            lenis.scrollTo($el, {
-              offset: 0,
-              immediate: false,
-              duration: 3,
-              easing: (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2), // https://easings.net
-            });
-          });
-        });
-
-        requestAnimationFrame(raf)
-      }
-    </script>
-
+   
 
 
 
@@ -426,7 +323,6 @@
 
 
 
-    <!-- END TWEENMAX V1 TEXT -->
   </body>
 
 </html>
