@@ -4941,9 +4941,7 @@ figcaption {
   display: grid;
 }
 
-.section_contact6 {
-  background-image: linear-gradient(#fff, rgba(49, 49, 255, .11));
-}
+
 
 .content6_component {
   grid-column-gap: 5rem;
