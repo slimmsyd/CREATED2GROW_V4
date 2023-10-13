@@ -1,0 +1,49 @@
+
+h1{font-size: 72px;
+    margin: 20px 0px;
+    }
+    h2{
+        text-align: left;
+    }
+    p{font-size: 16px; line-height: 144%; color: #4F4F4F;}
+    .marketing-header{ 
+    
+        border-radius: 30px;
+        height: 520px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-bottom: 85px;
+        z-index: -1;
+        }
+        .title-header{
+            margin: 0 auto;
+            width: 800px;
+            text-align: center;
+        
+        }
+        .title-header p { 
+            color: #4F4F4F;
+        }
+    
+    
+        .policy{
+            height: 100%;
+            margin-top: 60px;
+        }
+        .policy_container
+        { 
+            width: 800px;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 800px)
+        {
+            .policy_container
+            {
+                width: 100%;
+            }
+        }
+    
+        .policy_wrapper{
+            padding: 20px;
+        }
