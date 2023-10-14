@@ -7039,7 +7039,12 @@ figcaption {
   align-items: flex-start;
   display: flex;
 }
-
+@media screen and (max-width: 749px)
+{
+  .tween-block{
+    align-items: center !important;
+  }
+}
 .svg-filter, .html-embed {
   width: 0;
   height: 0;
