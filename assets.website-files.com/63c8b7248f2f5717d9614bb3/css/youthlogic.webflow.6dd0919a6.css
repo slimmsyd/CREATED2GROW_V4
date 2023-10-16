@@ -4322,6 +4322,13 @@ figcaption {
   overflow: auto;
 }
 
+@media screen and (max-width: 750px)
+{ 
+  .navbar22_menu{
+    height: 100vh;
+  }
+}
+
 .navbar22_menu-links-wrapper {
   width: 100%;
   grid-column-gap: 2.5rem;
@@ -4371,6 +4378,19 @@ figcaption {
   padding-left: 5vw;
   display: flex;
   position: relative;
+}
+@media screen and (max-width: 749px)
+
+{ 
+.navbar22_menu-left{
+  height: 100vh;
+}
+.navbar22_menu-links-wrapper{
+  display: flex !important;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
 }
 
 .navbar22_menu-button {
