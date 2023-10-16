@@ -463,6 +463,34 @@
             </div>
           </div>
         </section>
+
+
+        <div class = "form-container">
+          <div class = "form-wrapper">
+            <div class = "circle-gradient"></div>
+            <div class = "second-gradient "></div>
+  
+            <div class="close-btn" onclick="closeForm()">X</div>
+            <div class = "form-contents">
+                <div class="animation-wrapper">
+                  <img src="assets.website-files.com\Images\Logos\Asset 2PERFECTLOG.svg" loading="lazy" alt="" class="navbar22_logo desktop" />
+                </div>
+                <div class = "form-header-container">
+                  <h1 id = "form-header">Thank You</h1>
+                  <p style = 'font-weight: 900;' id = "formSub"></p>
+                  <p id = "formSub">
+                    Your Submission has been received. We've sent a confirmation email to you, we will be in touch soon.
+                  
+                  <a style="font-weight: 900;" href="https://mail.google.com/mail/u/0/#inbox" target = "_blank" class="popup-btn">View Email</a>
+  
+                </div>
+  
+            </div>
+          </div>
+        </div>
+            
+  
+
     
         <footer>
           <div class="footer-container">
@@ -564,7 +592,138 @@
   
    
 
-
+    <script>
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+    
+      const phone = document.getElementById("phone");
+  
+      phone.addEventListener("input", () => {
+        phone.value = phone.value.replace(/[^0-9]/g, "");
+  });
+  
+      const info = document.querySelector(".alert-info");
+    
+      function clearFormInputs(form) {
+        for (let i = 0; i < form.elements.length; i++) {
+          const element = form.elements[i];
+          switch (element.type) {
+            case "text":
+            case "number":
+            case "tel":
+            case "email":
+            case "password":
+            case "textarea":
+              element.value = "";
+              break;
+            case "checkbox":
+            case "radio":
+              element.checked = false;
+              break;
+            case "select-one":
+            case "select-multiple":
+              element.selectedIndex = 0;
+              break;
+            default:
+              break;
+          }
+        } 
+      }
+  function validate() {
+      const inputIds = ["fname", "lname", "femail", "phone", "budget" , "description"]
+      let isValid = true;
+  
+  inputIds.forEach((id) => {
+    const input = document.getElementById(id);
+    if (input.value === null || input.value.trim() === '') {
+      input.style.border = '2px solid red';
+      isValid = false;
+    } else {
+      input.style.border = '';
+    }
+  });
+  
+  
+  
+  return isValid;
+  }
+  const myForm = document.getElementById('confimationtext');
+  
+  myForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    // Perform your form submission handling here
+    console.log('Form submitted!');
+  });
+   
+  
+  function process(event) {
+    setSubmissionDateTime();
+  
+    const phoneNumber = phoneInput.getNumber();
+  
+    const name = document.getElementById('fname').value;
+    const lname = document.getElementById('lname').value;
+  
+    document.getElementById('formSub').innerText = name + ' ' + lname;
+  
+    const form = event.target;
+    const formData = new FormData(form);
+  
+    formSub.innerHTML = name + ' ' + lname;
+  
+    // var formContainer = document.querySelector('.form-container');
+    // formContainer.style.visibility = 'visible';
+  
+    formData.set('phone', phoneNumber);
+  
+    if (name.includes('Roberteruth') || lname.includes('Roberteruth')|| lname.includes('Williamquoky')) {
+      event.preventDefault(); // Prevent the form from being submitted
+      // alert('Invalid input: The forbidden key "<" is present.');
+      clearFormInputs(form);
+      console.log('Form is submitted GREAT!');
+      // make them think its submitting 
+    } else {
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+      })
+        .then(() => {
+          // window.alert("Form submitted successfully!");
+          clearFormInputs(form);
+   var formContainer = document.querySelector('.form-container');
+    formContainer.style.visibility = 'visible';
+        })
+        .catch((error) => {
+          console.error('Error submitting form:', error);
+        });
+    }
+  }
+    
+      function setSubmissionDateTime() {
+        const now = new Date();
+    
+        const submissionDateField = document.querySelector(
+          'input[name="submissionDate"]'
+        );
+        const submissionTimeField = document.querySelector(
+          'input[name="submissionTime"]'
+        );
+    
+        const submissionDate = now.toLocaleDateString();
+        const submissionTime = now.toLocaleTimeString();
+    
+        submissionDateField.value = submissionDate;
+        submissionTimeField.value = submissionTime;
+      }
+  
+      function closeForm() {
+      document.querySelector('.form-container').style.display = 'none';
+  }
+  
+    </script>
 
 
 
