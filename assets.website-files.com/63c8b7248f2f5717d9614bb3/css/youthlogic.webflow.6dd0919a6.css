@@ -1410,8 +1410,15 @@ font-family: Fivosansmodern, sans-serif;
 font-size: .9rem;
 font-weight: 100;
 }
+@media screen and (max-width: 749px){
 
-.submit-btn{
+  .flex-col label{
+    font-size: 11px;
+  }
+  .su
+
+}
+bmit-btn{
   width: 362px;
 height: 45px;
 cursor: pointer;
@@ -3661,7 +3668,6 @@ textarea.w-input, textarea.w-select {
 
 .w-checkbox {
   margin-bottom: 5px;
-  padding-left: 20px;
   display: block;
 }
 
@@ -4418,11 +4424,9 @@ figcaption {
   height: 1.125rem;
   min-height: 1.125rem;
   min-width: 1.125rem;
-  
   border: 1px solid #00e04b;
   border-radius: 6px;
   margin-top: 0;
-  margin-left: -1.25rem;
   margin-right: .5rem;
   transition: all .2s;
 }
@@ -5180,8 +5184,9 @@ figcaption {
 .form-checkbox {
   align-items: center;
   margin-bottom: 0;
-  padding-left: 1.25rem;
   display: flex;
+  padding-top: 1.5rem;
+
 }
 
 .shadow-small {
