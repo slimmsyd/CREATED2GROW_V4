@@ -13,7 +13,6 @@ const header = document.querySelector("header");
 
 let lastScrollTop = 0;
 document.addEventListener("scroll", () => { 
-    dropdown_services.classList.remove("displayBlock")
     navigation.classList.remove("nav-expand")
 
 

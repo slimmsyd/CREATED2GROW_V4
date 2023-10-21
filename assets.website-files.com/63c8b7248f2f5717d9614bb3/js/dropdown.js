@@ -13,10 +13,6 @@ for (i=0; i<accordion.length; i++) {
 //   console.log("this works")
 //   this.classList.toggle("active-first")
 // })
-last_accord.addEventListener("click", function() {
-  console.log("this works")
-  this.classList.toggle("active-long")
-})
 
 
 
