@@ -7716,7 +7716,7 @@ figcaption {
   box-shadow: 0 0 0 8px #fff;
 }
 
-.loader {
+.loader_home {
   z-index: 1200;
   flex-direction: row;
   justify-content: flex-start;
@@ -8258,7 +8258,7 @@ figcaption {
     background-color: #fff;
   }
 
-  .loader {
+  .loader_home {
     display: flex;
   }
 
@@ -8305,7 +8305,7 @@ figcaption {
     align-items: center;
   }
 
-  .loader {
+  .loader_home {
     display: flex;
   }
 
@@ -8993,7 +8993,7 @@ figcaption {
     text-align: right;
   }
 
-  .loader {
+  .loader_home {
     display: flex;
   }
 
@@ -9554,7 +9554,7 @@ figcaption {
     justify-content: flex-start;
   }
 
-  .loader {
+  .loader_home {
     display: flex;
   }
 
@@ -10078,7 +10078,7 @@ figcaption {
     grid-template-columns: 3rem 1fr;
   }
 
-  .loader {
+  .loader_home {
     display: flex;
   }
 
