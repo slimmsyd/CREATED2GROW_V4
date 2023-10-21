@@ -44,7 +44,6 @@ header_toggle.addEventListener("click", function()
 
     services_close.addEventListener("mouseover", ()  => { 
         console.log("This is working")
-        dropdown.classList.add("active_dropdown")
     
     })
     dropdown.classList.remove("active_dropdown")
