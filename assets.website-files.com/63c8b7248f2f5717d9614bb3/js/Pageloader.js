@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.addEventListener('click', function (event) {
       console.log('Button clicked');
       event.preventDefault(); // Prevent the default action (navigation)
+      event.stopPropagation(); // Stop the event from propagating up to the parent
       console.log('Default action prevented');
       $loader.classList.add('loader--active');
       
