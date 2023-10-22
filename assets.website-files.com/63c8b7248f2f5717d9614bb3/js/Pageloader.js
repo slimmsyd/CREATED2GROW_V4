@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.btn').forEach(function(btn) {
     btn.addEventListener('click', function (event) {
       console.log('Button clicked');
+      event.preventDefault(); // Prevent the default action (navigation)
       console.log('Default action prevented');
       $loader.classList.add('loader--active');
       
