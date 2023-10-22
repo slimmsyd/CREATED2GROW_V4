@@ -154,8 +154,8 @@
           <div class="navbar22_container"><a href="#" class="navbar22_logo-link w-nav-brand btn">
             
             
-            <img src="assets.website-files.com\Images\Logos\Asset 2PERFECTLOG.svg" loading="lazy" alt="" class="navbar22_logo desktop btn" />
-            <img src="assets.website-files.com\Images\Logos\Asset 2PERFECTLOG.svg" loading="lazy" alt="" class="navbar22_logo mobile btn" />
+            <img src="assets.website-files.com\Images\Logos\Asset 2PERFECTLOG.svg" loading="lazy" alt="" class="navbar22_logo desktop " />
+            <img src="assets.website-files.com\Images\Logos\Asset 2PERFECTLOG.svg" loading="lazy" alt="" class="navbar22_logo mobile " />
           
             
             
@@ -367,14 +367,10 @@
 
             <div id="w-node-_34d8ca6a-b21c-333e-23e1-03837ba5f9c9-f55e5ec5" class="header36_image-wrapper home">
 
-              <!-- <img style="transform: translateY(130px); height: 30vh !important; margin: 0 !important;" src="assets.website-files.com/Home Page/Money.webp" loading="lazy" alt="Blue Planet Icon" class="header36_image"> -->
-              
+
 
               <img src="assets.website-files.com/Home Page/mockup-phone.png" loading="lazy"alt="Money Web" class="header36_image" data-w-id="ec2943d3-f6df-baca-6e0c-e12014164a50" sizes="(max-width: 991px) 100vw, 50vw" class="header36_image hand" style="will-change: transform; transform: translate3d(16.3284%, 5.4428%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-              
-<!--               
-              <img src="/New-Website-/assets.website-files.com/Home Page/Arrow.webp" loading="lazy" data-w-id="ec2943d3-f6df-baca-6e0c-e12014164a50" class="header36_image hand" />
-         -->
+
           </div>
         </header>
         <section class="section_layout135">
@@ -1090,49 +1086,6 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script>
-      let introTl = gsap.timeline({
-        paused: true
-      });
-      introTl.from(".img-grid_photo", {
-        scale: 0.7,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 1
-      });
-
-      function updateProgress() {
-        let progress = Math.round(this.progress() * 100);
-        $(".loader_number").text(progress);
-      }
-
-      let tl = gsap.timeline({
-        onComplete: () => {
-          introTl.restart();
-        }
-      });
-      tl.to(".loader_bar", {
-          width: "100%",
-          duration: 2,
-          ease: "power2.inOut",
-          onUpdate: updateProgress
-        })
-        .to(".loader_bar", {
-          opacity: 0,
-          duration: 0.2,
-          delay: 0.4
-        })
-        .to(".loader_top", {
-          yPercent: -100
-        }, "<")
-        .to(".loader_bottom", {
-          yPercent: 100
-        }, "<")
-        .set(".loader_home", {
-          display: "none"
-        });
-    </script>
-
 
 
 
