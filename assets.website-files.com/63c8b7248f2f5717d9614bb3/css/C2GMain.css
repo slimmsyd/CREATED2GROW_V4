@@ -4631,12 +4631,12 @@ figcaption {
   font-size: .75rem;
   font-weight: 500;
   transition: all .475s cubic-bezier(.215, .61, .355, 1);
-  box-shadow: 0 0 20px -8px #00e04b;
+  box-shadow: 0 0 20px -8px #000;
 }
 
 .button:hover {
   transform: scale(.95);
-  box-shadow: 3px 6px 20px -3px #00e04b;
+  box-shadow: 3px 6px 20px -3px #000;
 }
 
 .button.is-link {
@@ -8034,12 +8034,14 @@ figcaption {
   text-decoration: none;
   transition: all .475s cubic-bezier(.215, .61, .355, 1);
   display: flex;
+  box-shadow: 0 0 20px -8px #000;
 }
 
 
 
 .link-block-2:hover {
   transform: scale(.95);
+  box-shadow: 3px 6px 20px -3px #000;
 }
 
 .cursor-wrap {
@@ -8194,7 +8196,7 @@ figcaption {
   color: #00e04b;
   text-align: center;
   text-transform: uppercase;
-  
+  box-shadow: 0 0 20px -8px #000;
   background-color: #fff;
   border: .07rem solid #00e04b;
   border-radius: 6px;
@@ -8212,6 +8214,8 @@ figcaption {
 
 .audio-button:hover {
   transform: scale(.95);
+  box-shadow: 3px 6px 20px -3px #000;
+
 }
 
 .link-block-3, .text-block-9 {
