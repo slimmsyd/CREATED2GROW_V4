@@ -341,30 +341,49 @@
                       
                         <div class = "grid_item">
 
-                          <div class = "flex-col">
-                            <input class ="circle-input" id = "Branding" type = "checkbox" name = "Branding">
-                            <label for = "Branding">Shopify Solutions</label>
-                        </div>
-                     
-                          <div class = "flex-col">
-                            <input class ="circle-input" id = "SEO" type = "checkbox" name = "SEO">
-                            <label for = "SEO">Marketing</label>
-                        </div>
-                          <div class = "flex-col">
-
-                          <div class = "flex-col">
-                              <input class ="circle-input"  id = "Consluting" type = "checkbox" name = "Consluting">
-                              <label for = "Consluting">Consluting</label>
+                          <div class="flex-col">
+                            <input class="circle-input" id="shopify_solutions" type="checkbox" name="Shopify">
+                            <label for="shopify_solutions">Shopify Solutions</label>
                           </div>
-                        
-                         
+                          
+                          <div class="flex-col">
+                            <input class="circle-input" id="marketing" type="checkbox" name="SEO">
+                            <label for="marketing">Marketing</label>
+                          </div>
+                          
+                          <div class="flex-col">
+                            <input class="circle-input" id="consulting" type="checkbox" name="Consluting">
+                            <label for="consulting">Consulting</label>
+                          </div>
                       </div>
                 
                       
-                      
                       </div>
                       
-                      <div style = "margin: 1.5rem 0rem;" id="w-node-_09e1cc37-03f8-1314-f633-6ae7a17e43e0-f55e5ed3" class="form-field-wrapper">
+                      <div id = "shopify_solutions_input" style = "margin: 1.5rem 0rem;" id="w-node-_09e1cc37-03f8-1314-f633-6ae7a17e43e0-f55e5ed3" class="form-field-wrapper">
+                        <label for="budget" class="field-label">Shopify Website Budget </label>
+                        <select class="form-input w-input" id="budget" name="budget" required>
+                            <option value="" disabled selected>$</option>
+                            <option value="1000">$0 - 10K</option>
+                            <option value="5000">$10k - $50k</option>
+                            <option value="10000">$100k</option>
+                        </select>
+                    </div>
+
+                      <div id = "marketing_input" style = "margin: 1.5rem 0rem;" id="w-node-_09e1cc37-03f8-1314-f633-6ae7a17e43e0-f55e5ed3" class="form-field-wrapper">
+                        <!-- <label for="budget" class="field-label">Budget </label> -->
+                        <select class="form-input w-input" id="budget" name="budget" required>
+                            <option value="" disabled selected>$</option>
+                            <option value="1000">$750 - 1,500</option>
+                            <option value="5000">$1,500 - $2,500</option>
+                            <option value="10000">$2,500 - $5,000</option>
+                            <option value="20000">$5000+</option>
+                        </select>
+                    </div>
+
+                   
+
+                      <div id = "consulting_input" style = "margin: 1.5rem 0rem;" id="w-node-_09e1cc37-03f8-1314-f633-6ae7a17e43e0-f55e5ed3" class="form-field-wrapper">
                         <!-- <label for="budget" class="field-label">Budget </label> -->
                         <select class="form-input w-input" id="budget" name="budget" required>
                             <option value="" disabled selected>$</option>
@@ -753,6 +772,36 @@
 
 
 
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM fully loaded and parsed');
+  
+  var checkboxes = document.querySelectorAll('.grid_item .circle-input');
+  console.log('Found ' + checkboxes.length + ' checkboxes');
+  
+  checkboxes.forEach(function(checkbox) {
+    console.log('Adding change event listener to:', checkbox.id);
+    
+    checkbox.addEventListener('change', function() {
+      console.log(this.id + ' checkbox state changed:', this.checked);
+      
+      var inputId = this.id.toLowerCase() + '_input';
+      var inputDiv = document.getElementById(inputId);
+      
+      if (inputDiv) {
+        console.log('Toggling display for:', inputId);
+        inputDiv.style.display = this.checked ? 'block' : 'none';
+      } else {
+        console.error('Element not found:', inputId);
+      }
+    });
+  });
+});
+
+</script>
 
 
 
