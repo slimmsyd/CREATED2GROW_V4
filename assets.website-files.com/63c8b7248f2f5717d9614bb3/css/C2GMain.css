@@ -5222,7 +5222,7 @@ figcaption {
   font-size: .9rem;
   line-height: 1.5;
   position: relative;
-  z-index: 888;
+  z-index: 5;
 }
 
 .icon-height-small {
