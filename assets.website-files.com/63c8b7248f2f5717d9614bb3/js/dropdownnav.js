@@ -16,7 +16,6 @@ document.addEventListener("scroll", () => {
 
 
     //Add degress to the top then fixed it in the position.
-    let nav_track_point = navigation.offsetTop
     let counter = 0
     while(counter > -170){
     counter -= 2;
