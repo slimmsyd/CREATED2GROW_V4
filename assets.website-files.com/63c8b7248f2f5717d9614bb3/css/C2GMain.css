@@ -674,8 +674,8 @@ top: 0;
 left: 0;
 opacity: 0;
 pointer-events: none;
+z-index: 80;
 transition: opacity .3s linear;
-z-index: 6;
 }
 .opacity_header{ 
 opacity: 0.5;

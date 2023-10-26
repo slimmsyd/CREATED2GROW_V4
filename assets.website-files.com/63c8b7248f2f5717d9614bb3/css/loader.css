@@ -82,6 +82,7 @@
   .loader--active .loader__icon {
     opacity: 1;
     transition: opacity .5s 1.4s ease;
+    z-index: -1 !important;
   }
   
   .loader--active .loader__tile {
