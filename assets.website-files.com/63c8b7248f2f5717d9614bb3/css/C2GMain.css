@@ -7727,7 +7727,7 @@ figcaption {
 }
 
 .loader_home {
-  z-index: 1200;
+  z-index: 888;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
