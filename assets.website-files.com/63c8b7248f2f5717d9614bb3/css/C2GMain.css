@@ -4615,6 +4615,12 @@ figcaption {
 
 .form-checkbox-label {
   margin-bottom: 0;
+  margin: 15px 0px;
+
+}
+span > .form-checkbox-label{
+  font-size: 12px !important;
+  margin: 5px 0px;
 }
 
 .text-size-tiny {

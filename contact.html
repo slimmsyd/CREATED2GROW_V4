@@ -342,8 +342,8 @@
                         <div class = "grid_item">
 
                           <div class="flex-col">
-                            <input class="circle-input" id="shopify_solutions" type="checkbox" name="Shopify">
-                            <label for="shopify_solutions">Shopify Website</label>
+                            <input class="circle-input" id="shopify_solutions" type="checkbox" name="Branding" data-toggle-span="shopify-reference-span">
+                            <label for="shopify_solutions">Shopify Solutions</label>
                           </div>
                           
                           <div class="flex-col">
@@ -360,18 +360,16 @@
                       
                       </div>
                       
-                      <div id = "shopify_solutions_input"  id="w-node-_09e1cc37-03f8-1314-f633-6ae7a17e43e0-f55e5ed3" class="form-field-wrapper">
-                        <label for="budget" class="field-label">Shopify Website Budget
-                        </label>
+                      <div id="shopify_solutions_input" class="form-field-wrapper" style="display: none;">
+                        <label for="budget" class="field-label">Shopify Website Budget</label>
                         <select class="form-input w-input" id="budget" name="budget" required>
-                            <option value="" disabled selected>$</option>
-                            <option value="1000">$750 - $1,500</option>
-                            <option value="5000">$1,500 - $2,500</option>
-                            <option value="10000">$2,500 - $5,000</option>
-                            <option value="20000">$5,000+</option>
+                          <option value="" disabled selected>$</option>
+                          <option value="1000">$750 - $1,500</option>
+                          <option value="5000">$1,500 - $2,500</option>
+                          <option value="10000">$2,500 - $5,000</option>
+                          <option value="20000">$5,000+</option>
                         </select>
-                    </div>
-
+                      </div>
                       <div id = "marketing_input"  id="w-node-_09e1cc37-03f8-1314-f633-6ae7a17e43e0-f55e5ed3" class="form-field-wrapper">
                         <label for="budget" class="field-label">Current Monthly Revenue
                         </label>
@@ -400,8 +398,16 @@
 
 
 
-                      <div style = "margin-top: 1.5rem;" class="form-field-wrapper"><label for="Contact-6-Message" class="field-label">More Information:</label><textarea id="Contact-6-Message" name="Contact-6-Message" maxlength="5000" data-name="Contact 6 Message" placeholder="Type Message here..." required="" class="form-input is-text-area w-input"></textarea></div>
-                      <span style = "cursor: default;" for="Contact-6-Checkbox" class="form-checkbox-label text-size-small w-form-label">Please include as much information as possible so our team can asses your inquiry to the best of our ability before our meeting</span></span>
+                      <div style = "margin-top: 1.5rem;" class="form-field-wrapper"><label for="Contact-6-Message" class="field-label">More Information:</label>
+                        <span style = "cursor: default;" for="Contact-6-Checkbox" class="form-checkbox-label text-size-small w-form-label">Please include as much information as possible so our team can asses your inquiry to the best of our ability before our meeting</span></span>
+                      
+                        <span id="shopify-reference-span" style="cursor: default; display: none;" class="form-checkbox-label text-size-small w-form-label">
+                          If you have any references in mind for your website or websites that you'd like similar to yours please include below
+                        </span>
+                        
+                        
+                        <textarea id="Contact-6-Message" name="Contact-6-Message" maxlength="5000" data-name="Contact 6 Message" placeholder="Type Message here..." required="" class="form-input is-text-area w-input"></textarea></div>
+             
                       <div class="margin-bottom margin-xsmall"><label id="Contact-6-Checkbox" class="w-checkbox form-checkbox">
                           
                           <input type="text" id="Contact 6 Checkbox" name="Contact-6-Checkbox" data-name="Contact 6 Checkbox" required="" style="opacity:0;position:absolute;z-index:-1" />
@@ -535,6 +541,48 @@
         </section>
     
     </div>
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+    
+    var checkboxes = document.querySelectorAll('.grid_item .circle-input');
+    console.log('Found ' + checkboxes.length + ' checkboxes');
+    
+    checkboxes.forEach(function(checkbox) {
+      console.log('Adding change event listener to:', checkbox.id);
+      
+      checkbox.addEventListener('change', function() {
+        console.log(this.id + ' checkbox state changed:', this.checked);
+        
+        var inputId = this.id.toLowerCase() + '_input';
+        var inputDiv = document.getElementById(inputId);
+        
+        if (inputDiv) {
+          console.log('Toggling display for:', inputId);
+          inputDiv.style.display = this.checked ? 'block' : 'none';
+        } else {
+          console.error('Element not found:', inputId);
+        }
+  
+        // Handle the toggling of the span's visibility
+        var spanId = this.dataset.toggleSpan;
+        if (spanId) {
+          var span = document.getElementById(spanId);
+          if (span) {
+            console.log('Toggling visibility for:', spanId);
+            span.style.display = this.checked ? 'block' : 'none';
+          } else {
+            console.error('Span element not found:', spanId);
+          }
+        }
+      });
+    });
+  });
+  </script>
 
 
     <script src = "assets.website-files.com/63c8b7248f2f5717d9614bb3/js/Pageloader.js">
@@ -772,42 +820,6 @@
         }, "<")
     
     </script>
-
-
-
-
-
-
-<script>
-
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM fully loaded and parsed');
-  
-  var checkboxes = document.querySelectorAll('.grid_item .circle-input');
-  console.log('Found ' + checkboxes.length + ' checkboxes');
-  
-  checkboxes.forEach(function(checkbox) {
-    console.log('Adding change event listener to:', checkbox.id);
-    
-    checkbox.addEventListener('change', function() {
-      console.log(this.id + ' checkbox state changed:', this.checked);
-      
-      var inputId = this.id.toLowerCase() + '_input';
-      var inputDiv = document.getElementById(inputId);
-      
-      if (inputDiv) {
-        console.log('Toggling display for:', inputId);
-        inputDiv.style.display = this.checked ? 'block' : 'none';
-      } else {
-        console.error('Element not found:', inputId);
-      }
-    });
-  });
-});
-
-</script>
-
-
 
 
 
