@@ -1575,7 +1575,8 @@ display: flex;
 flex-direction: column-reverse ;
 text-align: center;
 text-align: left;
-font-family: Fivosansmodern, sans-serif;
+font-family: 'Inter', sans-serif;
+;
 font-size: .9rem;
 font-weight: 100;
 }
@@ -3890,7 +3891,8 @@ body {
 h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
+;
   font-size: 3.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -4036,7 +4038,8 @@ figcaption {
 }
 
 .text-style-link {
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
+;
   text-decoration: underline;
 }
 
@@ -4362,7 +4365,8 @@ figcaption {
 .text-size-medium {
   color: #000;
   text-transform: none;
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
+;
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.3;
@@ -4376,7 +4380,8 @@ figcaption {
 .text-size-medium.logolist {
   color: #000;
   text-transform: none;
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
+;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.3;
@@ -4408,7 +4413,8 @@ figcaption {
   color: #00e04b;
   text-transform: lowercase;
   
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
+;
   font-size: 3rem;
   font-weight: 500;
   line-height: 1.2;
@@ -4456,7 +4462,8 @@ figcaption {
 
 .heading-style-h6 {
   text-transform: uppercase;
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
+;
   font-size: .9rem;
   font-weight: 500;
   line-height: 1.4;
@@ -4520,7 +4527,8 @@ figcaption {
   color: #00e04b;
   text-align: center;
   text-transform: uppercase;
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
+;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.2;
@@ -4566,8 +4574,8 @@ figcaption {
 .heading-style-h1 {
   color: #00e04b;
   text-transform: uppercase;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: 3.5rem;
+  font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
   font-weight: 500;
   opacity: 1 !important;
   line-height: 1.2;
@@ -4615,7 +4623,7 @@ figcaption {
 
 .form-checkbox-label {
   margin-bottom: 0;
-  margin: 15px 0px;
+  margin: 1px 0px;
 
 }
 span > .form-checkbox-label{
@@ -4624,8 +4632,8 @@ span > .form-checkbox-label{
 }
 
 .text-size-tiny {
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .75rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .75rem;
   line-height: 1.2;
 }
 
@@ -4643,8 +4651,8 @@ span > .form-checkbox-label{
   border: .07rem dashed #0000;
   border-radius: 6px;
   padding: .75rem 2.2rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .75rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .75rem;
   font-weight: 500;
   transition: all .475s cubic-bezier(.215, .61, .355, 1);
   box-shadow: 0 0 20px -8px #000;
@@ -4759,15 +4767,15 @@ span > .form-checkbox-label{
 .heading-style-h4 {
   color: #00e04b;
   text-transform: uppercase;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+    font-size: 2rem;
   font-weight: 500;
   line-height: 1.3;
 }
 
 .text-style-italic {
-  font-family: futura-pt;
-  font-style: italic;
+  font-family: 'Inter', sans-serif;
+    font-style: italic;
 }
 
 .icon-1x1-xxsmall {
@@ -4829,8 +4837,8 @@ span > .form-checkbox-label{
 
 .text-size-regular {
   
-  font-family: Fivosansmodern, sans-serif;
-  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+    font-size: 1rem;
   line-height: 1.3;
 }
 
@@ -4865,7 +4873,7 @@ span > .form-checkbox-label{
 
 .heading-style-h3 {
   text-transform: uppercase;
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;  
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -4886,8 +4894,8 @@ span > .form-checkbox-label{
   border-radius: 6px;
   margin-bottom: 0;
   padding: .5rem .75rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+    font-size: 1rem;
   line-height: 1.4;
   box-shadow: 5px 5px 20px -8px rgba(0, 0, 0, 0.49);
 }
@@ -4986,8 +4994,8 @@ span > .form-checkbox-label{
 
 .text-color-white {
   color: #2e2927;
-  font-family: futura-pt;
-  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+    font-weight: 600;
 }
 
 .background-color-white {
@@ -4996,8 +5004,8 @@ span > .form-checkbox-label{
 
 .text-weight-semibold {
   text-transform: uppercase;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .8rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .8rem;
   font-weight: 500;
 }
 
@@ -5021,17 +5029,16 @@ span > .form-checkbox-label{
 .text-weight-semibold.whois {
   color: #00e04b;
   
-  font-family: Fivosansmodern, sans-serif;
-}
+  font-family: 'Inter', sans-serif;}
 
 .text-style-muted {
   opacity: .6;
-  font-family: futura-pt;
+  font-family: 'Inter', sans-serif;
 }
 
 .text-style-nowrap {
   white-space: nowrap;
-  font-family: futura-pt;
+  font-family: 'Inter', sans-serif;
 }
 
 .text-align-left {
@@ -5187,15 +5194,15 @@ span > .form-checkbox-label{
 }
 .text-size-small {
   
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .875rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .875rem;
   line-height: 1.3;
 }
 
 .text-size-small.text-weight-semibold {
   color: #00e04b;
-  font-family: Fivosansmodern, sans-serif;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+    font-weight: 500;
   line-height: 1.2;
 }
 
@@ -5211,7 +5218,7 @@ span > .form-checkbox-label{
 .text-size-small.who-is-gen-z {
   color: #000000;
   
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .class-label-column {
@@ -5224,8 +5231,8 @@ span > .form-checkbox-label{
 }
 
 .form-field-wrapper {
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .9rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .9rem;
   line-height: 1.5;
   position: relative;
   z-index: 5;
@@ -5268,8 +5275,8 @@ span > .form-checkbox-label{
 
 .text-rich-text {
   border-radius: 6px;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .9rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .9rem;
   font-weight: 400;
   line-height: 1.3;
 }
@@ -5277,8 +5284,8 @@ span > .form-checkbox-label{
 .text-rich-text h1 {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+    font-weight: 500;
 }
 
 .text-rich-text blockquote {
@@ -5289,8 +5296,8 @@ span > .form-checkbox-label{
 .text-rich-text h2 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+    font-weight: 500;
 }
 
 .text-rich-text h3 {
@@ -5299,8 +5306,8 @@ span > .form-checkbox-label{
   text-transform: uppercase;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+    font-size: 2rem;
   font-weight: 500;
   line-height: 1;
 }
@@ -5311,24 +5318,24 @@ span > .form-checkbox-label{
   text-transform: uppercase;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+    font-weight: 500;
   line-height: 1;
 }
 
 .text-rich-text h5 {
   margin-top: 1.25rem;
   margin-bottom: 1rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+    font-weight: 500;
 }
 
 .text-rich-text h6 {
   color: #000;
   margin-top: 1.25rem;
   margin-bottom: 1rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+    font-weight: 500;
   line-height: 1.3;
 }
 
@@ -5349,7 +5356,7 @@ span > .form-checkbox-label{
 }
 
 .text-style-2lines {
-  font-family: futura-pt;
+  font-family: 'Inter', sans-serif;
 }
 
 .icon-height-medium {
@@ -5384,12 +5391,12 @@ span > .form-checkbox-label{
 }
 
 .text-style-3lines {
-  font-family: futura-pt;
+  font-family: 'Inter', sans-serif;
 }
 
 .text-size-large {
-  font-family: Fivosansmodern, sans-serif;
-  font-size: 1.3rem;
+  font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
   line-height: 1.2;
 }
 
@@ -5663,8 +5670,8 @@ span > .form-checkbox-label{
   color: #00e04b;
   
   padding: 0;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .85rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .85rem;
   font-weight: 500;
   text-decoration: none;
   transition: all .35s;
@@ -5769,8 +5776,8 @@ span > .form-checkbox-label{
   margin-left: 0;
   margin-right: 0;
   padding: .5rem 0;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -5862,7 +5869,7 @@ span > .form-checkbox-label{
   color: #00e04b;
   background-color: #f4f4ff;
   padding: 1.5rem;
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .menu-icon_line-middle-top {
@@ -5884,49 +5891,48 @@ span > .form-checkbox-label{
 
 .heading-2, .heading-3, .heading-4, .heading-5, .heading-6, .heading-7 {
   text-transform: uppercase;
-  font-family: Fivosansmodern, sans-serif;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+    font-weight: 500;
 }
 
 .paragraph {
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .875rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .875rem;
   line-height: 1.3;
 }
 
 .link {
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .875rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .875rem;
 }
 
 .block-quote {
-  font-family: Fivosansmodern, sans-serif;
-  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+    font-size: 1rem;
 }
 
 .paragraph-2, .paragraph-3 {
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .list {
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .875rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .875rem;
 }
 
 .list-2 {
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: .875rem;
   line-height: 1.3;
 }
 
 .list-2.what-we-do {
   color: #00e04b;
-  
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .list-3 {
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: .875rem;
 }
 
@@ -6175,7 +6181,8 @@ span > .form-checkbox-label{
   background-color: #fff;
   border-radius: 6px;
   padding: .25rem .5rem;
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
+;
   font-size: .6rem;
   font-weight: 500;
   line-height: 1.3;
@@ -6260,8 +6267,8 @@ span > .form-checkbox-label{
   
   padding-top: .5rem;
   padding-bottom: .5rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .8rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .8rem;
   text-decoration: none;
 }
 
@@ -6273,8 +6280,8 @@ span > .form-checkbox-label{
   align-items: center;
   padding-top: .45rem;
   padding-bottom: .45rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .8rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .8rem;
   text-decoration: none;
   display: flex;
 }
@@ -6293,8 +6300,8 @@ span > .form-checkbox-label{
 
 .footer1_credit-text {
   text-transform: uppercase;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .875rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .875rem;
 }
 
 .footer1_credit-text.right {
@@ -6472,8 +6479,8 @@ span > .form-checkbox-label{
   grid-auto-columns: 1fr;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .9rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .9rem;
   display: grid;
 }
 
@@ -6740,12 +6747,12 @@ span > .form-checkbox-label{
 }
 
 .text-block, .text-block-2, .text-block-3 {
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .paragraph-14 {
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .8rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .8rem;
 }
 
 .text-span-10 {
@@ -6829,8 +6836,8 @@ span > .form-checkbox-label{
 
 .blog3_category-wrapper {
   margin-bottom: .5rem;
-  font-family: Fivosansmodern, sans-serif;
-  display: flex;
+  font-family: 'Inter', sans-serif;
+    display: flex;
 }
 
 .blog3_title-wrapper {
@@ -6900,7 +6907,7 @@ span > .form-checkbox-label{
 }
 
 .text-block-5 {
-  font-family: Fivosansmodern, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .top-banner-text_line {
@@ -7053,8 +7060,8 @@ span > .form-checkbox-label{
 }
 
 .heading-27 {
-  font-family: Fivosansmodern, sans-serif;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+    font-weight: 500;
 }
 
 .layout353_component {
@@ -7223,8 +7230,8 @@ span > .form-checkbox-label{
   border: 1px solid #00e04b;
   border-radius: 6px;
   padding: .25rem .5rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .8rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .8rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -7334,8 +7341,8 @@ span > .form-checkbox-label{
 
 .text-block-7 {
   color: #00e04b;
-  font-family: Fivosansmodern, sans-serif;
-  line-height: 1.3;
+  font-family: 'Inter', sans-serif;
+    line-height: 1.3;
 }
 
 .section_cta1 {
@@ -7708,8 +7715,8 @@ span > .form-checkbox-label{
   color: #00e04b;
   text-align: right;
   text-transform: uppercase;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: 1.8rem;
+  font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
   font-weight: 500;
 }
 
@@ -7737,8 +7744,8 @@ span > .form-checkbox-label{
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  font-family: Fivosansmodern, sans-serif;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+    font-weight: 500;
   display: flex;
   position: fixed;
   top: 0%;
@@ -7860,8 +7867,8 @@ span > .form-checkbox-label{
   z-index: 900;
   color: #fff;
   padding-top: 3px;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+    font-size: 1rem;
   font-weight: 500;
   line-height: 1.1;
   position: absolute;
@@ -8009,8 +8016,8 @@ span > .form-checkbox-label{
   border-radius: 6px;
   margin-bottom: 0;
   padding: 0;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .75rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .75rem;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -8220,8 +8227,8 @@ span > .form-checkbox-label{
   align-items: center;
   margin-top: 17px;
   padding: .45rem .6rem .45rem .9rem;
-  font-family: Fivosansmodern, sans-serif;
-  font-size: .6rem;
+  font-family: 'Inter', sans-serif;
+    font-size: .6rem;
   font-weight: 500;
   line-height: 1;
   text-decoration: none;
