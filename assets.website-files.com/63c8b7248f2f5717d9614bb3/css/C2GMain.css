@@ -648,7 +648,7 @@ position: relative;
 margin-bottom: min(40px,4vh);
 opacity: 0;
 transition: opacity 1500ms linear;
-
+text-transform: uppercase;
 
 }
 
