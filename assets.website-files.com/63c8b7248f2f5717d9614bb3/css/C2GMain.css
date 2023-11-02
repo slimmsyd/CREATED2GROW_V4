@@ -12,7 +12,12 @@
   margin-bottom: 0.5rem;
 
 }
-
+.bold_600{
+  font-weight: 600 !important;
+}
+.bold_500{
+  font-weight: 500 !important;
+}
 
 /* STYLES ON INDEX HTML PAGE  */
 
@@ -1601,7 +1606,7 @@ color: #fff;
 
 }
 label,#small { 
-  color: #566655;
+  color: black;
 }
 
 #small{
@@ -3894,7 +3899,7 @@ h1 {
   font-family: 'Inter', sans-serif;
 ;
   font-size: 3.5rem;
-  font-weight: 500;
+  font-weight:600 !important;
   line-height: 1.2;
 }
 
@@ -3902,7 +3907,7 @@ h2 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 600 !important;
   line-height: 1.2;
 }
 
@@ -3910,7 +3915,7 @@ h3 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600 !important;
   line-height: 1.2;
 }
 
@@ -4530,18 +4535,20 @@ figcaption {
   font-family: 'Inter', sans-serif;
 ;
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 600 !important;
   line-height: 1.2;
 }
 
 .heading-style-h5.who-is-genz {
   color: #000000;
   text-align: left;
+  font-weight: 500;
   
 }
 
 .heading-style-h5.is-logo {
   color: #000;
+  font-weight: 400 !important;
 }
 
 .heading-style-h5.is-logo.home {
@@ -4622,8 +4629,7 @@ figcaption {
 }
 
 .form-checkbox-label {
-  margin-bottom: 0;
-  margin: 1px 0px;
+  margin: 5px 0px;
 
 }
 span > .form-checkbox-label{
@@ -4640,6 +4646,7 @@ span > .form-checkbox-label{
 .field-label {
   margin-bottom: .4rem;
   font-weight: 400;
+  color: black !important
 }
 
 .button {
@@ -4653,7 +4660,7 @@ span > .form-checkbox-label{
   padding: .75rem 2.2rem;
   font-family: 'Inter', sans-serif;
     font-size: .75rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: all .475s cubic-bezier(.215, .61, .355, 1);
   box-shadow: 0 0 20px -8px #000;
 }
@@ -5006,7 +5013,7 @@ span > .form-checkbox-label{
   text-transform: uppercase;
   font-family: 'Inter', sans-serif;
     font-size: .8rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .text-weight-semibold.home {
@@ -5929,6 +5936,7 @@ span > .form-checkbox-label{
 .list-2.what-we-do {
   color: #00e04b;
   font-family: 'Inter', sans-serif;
+  font-weight: 700;
 }
 
 .list-3 {
@@ -8046,6 +8054,7 @@ span > .form-checkbox-label{
 }
 
 .link-block-2 {
+  font-weight: 700;
   height: 44px;
   opacity: 1 !important;
   background-color: #fff;
@@ -8229,7 +8238,7 @@ span > .form-checkbox-label{
   padding: .45rem .6rem .45rem .9rem;
   font-family: 'Inter', sans-serif;
     font-size: .6rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   text-decoration: none;
   transition: all .475s cubic-bezier(.215, .61, .355, 1);
