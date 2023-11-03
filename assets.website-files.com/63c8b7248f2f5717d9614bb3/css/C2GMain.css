@@ -6731,7 +6731,6 @@ span > .form-checkbox-label{
 
 
 .heading-11.home {
-  letter-spacing: -2px;
   
   /* line-height: .5; */
 }
@@ -6748,9 +6747,6 @@ span > .form-checkbox-label{
   text-transform: uppercase;
 }
 
-.heading-11.contact.shi {
-  font-size: 4.1rem;
-}
 
 .heading-11.contact.speaking {
   letter-spacing: -6px;
