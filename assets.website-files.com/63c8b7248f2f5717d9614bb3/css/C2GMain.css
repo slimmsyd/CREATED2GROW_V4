@@ -6725,9 +6725,10 @@ span > .form-checkbox-label{
 .heading-11 {
   color: #000;
   /* letter-spacing: -7px; */
-  font-size: 6rem;
+  font-size: 4rem;
   line-height: .9;
 }
+
 
 .heading-11.home {
   letter-spacing: -2px;
