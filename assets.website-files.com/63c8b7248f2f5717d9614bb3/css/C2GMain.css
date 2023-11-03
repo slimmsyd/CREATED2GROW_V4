@@ -659,6 +659,7 @@ margin-bottom: min(40px,4vh);
 opacity: 0;
 transition: opacity 1500ms linear;
 text-transform: uppercase;
+font-size: 600;
 
 }
 
@@ -705,7 +706,7 @@ font-size: min(57px,max(32px,5.8vh));
 cursor: pointer;
 padding: 1px 0;
 font-size: 34px !important;
-font-weight: 300;
+font-weight: 600;
 display: block;
 transition: opacity 1.5s linear;
 opacity: 0;
