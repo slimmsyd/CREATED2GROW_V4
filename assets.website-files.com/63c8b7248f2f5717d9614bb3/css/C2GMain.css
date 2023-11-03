@@ -6726,7 +6726,7 @@ span > .form-checkbox-label{
 .heading-11 {
   color: #000;
   /* letter-spacing: -7px; */
-  font-size: 6rem !important;
+  font-size: 6rem ;
   line-height: .9;
 }
 
@@ -8894,7 +8894,7 @@ span > .form-checkbox-label{
 
   .heading-11.contact.shi {
     text-align: left;
-    font-size: 4.2rem;
+    font-size: 3.2rem;
   }
 
   .heading-11.contact.speaking {
