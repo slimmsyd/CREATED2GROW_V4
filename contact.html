@@ -319,12 +319,8 @@
                         
                         <input style = "border: 1px solid #00e04b" type="submit" value="Submit" data-wait="Please wait..." id="w-node-_84ff16a4-3cd8-5c1d-c6eb-a038842be415-f55e5ed3" class="button w-button" />
                     </form>
-                    <div class="success-message w-form-done">
-                      <div class="success-text">Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="error-message w-form-fail">
-                      <div class="error-text">Oops! Something went wrong while submitting the form.</div>
-                    </div>
+                  
+                
                   </div>
                 </div>
               </div>
@@ -333,7 +329,7 @@
         </section>
 
 
-        <div class = "form-container">
+        <div class = "form-container w-form-done">
           <div class = "form-wrapper">
             <div class = "circle-gradient"></div>
             <div class = "second-gradient "></div>
@@ -445,6 +441,37 @@
     </div>
 
 
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("wf-form-General-Contact-Form");
+  const formContainer = document.querySelector(".form-container");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Here, you would normally validate your form inputs
+    // For demonstration, we'll assume the form is valid and show the form container
+    
+    // If you were submitting the form to a server, you would use fetch() or another AJAX method here
+    // After the form is successfully submitted to the server (or immediately, if not submitting via AJAX):
+
+    // Show the form container
+    formContainer.style.display = "block";
+    formContainer.style.visibility = "visible";
+
+    // Optionally, hide the form or display a message
+    // form.style.display = "none";
+    // You can also clear the form fields if necessary
+  });
+
+  // Close form function
+  window.closeForm = function() {
+    formContainer.style.display = "none";
+  };
+});
+
+    </script>
 
 
 <script>
@@ -587,6 +614,8 @@
   
     var formContainer = document.querySelector('.form-container');
     formContainer.style.visibility = 'visible';
+formContainer.style.display = 'block'; // Use 'block', 'flex', 'grid' etc., depending on your layout
+
   
     formData.set('phone', phoneNumber);
   

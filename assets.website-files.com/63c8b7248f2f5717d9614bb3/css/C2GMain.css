@@ -2256,7 +2256,7 @@ button, [type="button"], [type="reset"] {
 
 .w-form-done {
   text-align: center;
-  background-color: #ddd;
+  background-color: #3d3b3b6b;
   padding: 20px;
   display: none;
 }
