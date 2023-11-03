@@ -261,7 +261,7 @@
                       
                       <div id="shopify_solutions_input" class="form-field-wrapper" style="display: none;">
                         <label for="budget" class="field-label">Shopify Website Budget</label>
-                        <select class="form-input w-input" id="budget" name="Shopify Budget" required>
+                        <select class="form-input w-input" id="budget" name="Shopify Budget" >
                           <option value="" disabled selected>$</option>
                           <option value="1000">$750 - $1,500</option>
                           <option value="5000">$1,500 - $2,500</option>
@@ -269,9 +269,9 @@
                           <option value="20000">$5,000+</option>
                         </select>
                       </div>
-                      <div class="form-field-wrapper">
+                      <div id = "marketing_input" class="form-field-wrapper">
                         <label for="revenue-budget" class="field-label">Current Monthly Revenue</label>
-                        <select class="form-input w-input" id="revenue-budget" name="revenueBudget" required>
+                        <select class="form-input w-input" id="revenue-budget" name="revenueBudget" >
                           <option value="" disabled>Please Select</option>
                           <option value="1000">$0 - $10K</option>
                           <option value="5000">$10K - $50K</option>
@@ -585,8 +585,8 @@
   
     formSub.innerHTML = name + ' ' + lname;
   
-    // var formContainer = document.querySelector('.form-container');
-    // formContainer.style.visibility = 'visible';
+    var formContainer = document.querySelector('.form-container');
+    formContainer.style.visibility = 'visible';
   
     formData.set('phone', phoneNumber);
   
