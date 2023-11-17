@@ -182,7 +182,16 @@
                   <div class="contact6_form-block w-form">
                    
                    
-                    <form action = "https://hooks.zapier.com/hooks/catch/13060639/3kt513k/" id="wf-form-General-Contact-Form" name="wf-form-General-Contact-Form" data-name="General Contact Form" method="post" class="contact6_form" data-wf-page-id="64daa2c2061bd9abf55e5ed3" data-wf-element-id="84ff16a4-3cd8-5c1d-c6eb-a038842be3d5"  >
+                    <form 
+                    action="https://hooks.zapier.com/hooks/catch/13060639/3kt513k/" 
+                    id="wf-form-General-Contact-Form" 
+                    name="wf-form-General-Contact-Form" 
+                    data-name="General Contact Form" 
+                    method="post" 
+                    class="contact6_form" 
+                    data-wf-page-id="64daa2c2061bd9abf55e5ed3" 
+                    data-wf-element-id="84ff16a4-3cd8-5c1d-c6eb-a038842be3d5">
+                    >
 
 
 
@@ -265,19 +274,19 @@
                         <label for="budget" class="field-label">Shopify Website Budget</label>
                         <select class="form-input w-input" id="budget" name="Shopify Budget" >
                           <option value="" disabled selected>$</option>
-                          <option value="1000">$750 - $1,500</option>
-                          <option value="5000">$1,500 - $2,500</option>
-                          <option value="10000">$2,500 - $5,000</option>
-                          <option value="20000">$5,000+</option>
+                          <option value="750 - $1,500">$750 - $1,500</option>
+                          <option value="1,500 - $2,500">$1,500 - $2,500</option>
+                          <option value="2,500 - $5,00">$2,500 - $5,000</option>
+                          <option value="5,000">$5,000+</option>
                         </select>
                       </div>
                       <div id = "marketing_input" class="form-field-wrapper">
                         <label for="revenue-budget" class="field-label">Current Monthly Revenue</label>
                         <select class="form-input w-input" id="revenue-budget" name="revenueBudget" >
                           <option value="" disabled>Please Select</option>
-                          <option value="1000">$0 - $10K</option>
-                          <option value="5000">$10K - $50K</option>
-                          <option value="10000">$100K+</option>
+                          <option value="0 - $10">$0 - $10K</option>
+                          <option value="10K - $50">$10K - $50K</option>
+                          <option value="100">$100K+</option>
                         </select>
                       </div>
                       
@@ -444,37 +453,7 @@
     </div>
 
 
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-  const form = document.getElementById("wf-form-General-Contact-Form");
-  const formContainer = document.querySelector(".form-container");
-
-  form.addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Here, you would normally validate your form inputs
-    // For demonstration, we'll assume the form is valid and show the form container
-    
-    // If you were submitting the form to a server, you would use fetch() or another AJAX method here
-    // After the form is successfully submitted to the server (or immediately, if not submitting via AJAX):
-
-    // Show the form container
-    formContainer.style.display = "block";
-    formContainer.style.visibility = "visible";
-
-    // Optionally, hide the form or display a message
-    // form.style.display = "none";
-    // You can also clear the form fields if necessary
-  });
-
-  // Close form function
-  window.closeForm = function() {
-    formContainer.style.display = "none";
-  };
-});
-
-    </script>
+  
 
 
 <script>
@@ -668,6 +647,43 @@ formContainer.style.display = 'block'; // Use 'block', 'flex', 'grid' etc., depe
   
     </script>
 
+
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+const form = document.getElementById("wf-form-General-Contact-Form");
+const formContainer = document.querySelector(".form-container");
+
+form.addEventListener("submit", function(event) {
+event.preventDefault(); // Prevent the default form submission
+
+// Gather form data
+const formData = new FormData(form);
+
+// Submit the form data using fetch
+fetch('https://hooks.zapier.com/hooks/catch/13060639/3kt513k/', {
+method: 'post',
+body: formData
+})
+.then(response => response.json())
+.then(data => {
+console.log('Success:', data);
+// Handle success - show confirmation message, hide form, etc.
+})
+.catch((error) => {
+console.error('Error:', error);
+// Handle error
+});
+
+// Show the form container or a loading indicator
+formContainer.style.display = "block";
+formContainer.style.visibility = "visible";
+});
+
+
+});
+
+</script>
 
 
     <script>
