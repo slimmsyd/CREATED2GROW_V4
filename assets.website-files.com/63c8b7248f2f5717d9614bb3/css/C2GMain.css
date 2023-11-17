@@ -330,6 +330,9 @@ body:hover .cursor {
         padding: 8% !important;
         height: 495px  !important;
     }
+    .header36_image{
+      transform: translate(0px,0px) !important;
+    }
  }
  .form-contents {
     display: flex;
@@ -3920,7 +3923,7 @@ h2 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 3rem;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   line-height: 1.2;
 }
 
@@ -5449,7 +5452,7 @@ span > .form-checkbox-label{
 .padding-global {
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 10%;
+  padding-top: 0%;
 }
 .padding-global what-is-yl{
   padding-top:2rem;
