@@ -456,48 +456,6 @@
   
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM fully loaded and parsed');
-  
-  var checkboxes = document.querySelectorAll('.grid_item .circle-input');
-  console.log('Found ' + checkboxes.length + ' checkboxes');
-  
-  checkboxes.forEach(function(checkbox) {
-    console.log('Adding change event listener to:', checkbox.id);
-    
-    checkbox.addEventListener('change', function() {
-      console.log(this.id + ' checkbox state changed:', this.checked);
-      
-      var inputId = this.id.toLowerCase() + '_input';
-      var inputDiv = document.getElementById(inputId);
-      
-      if (inputDiv) {
-        console.log('Toggling display for:', inputId);
-        inputDiv.style.display = this.checked ? 'block' : 'none';
-
-        // Shopify Website Checkbox
-        if (this.id === 'Shopify_Website' && this.checked) {
-          document.getElementById('budget').required = true;
-        } else if (this.id === 'Shopify_Website') {
-          document.getElementById('budget').required = false;
-        }
-
-        // Marketing Checkbox
-        if (this.id === 'Marketing' && this.checked) { // Replace 'Marketing' with the actual ID of your marketing checkbox
-          document.getElementById('revenue-budget').required = true;
-        } else if (this.id === 'Marketing') {
-          document.getElementById('revenue-budget').required = false;
-        }
-      } else {
-        console.error('Element not found:', inputId);
-      }
-    });
-  });
-});
-
-  </script>
-
 
     <script src = "assets.website-files.com/63c8b7248f2f5717d9614bb3/js/Pageloader.js">
     </script>
@@ -514,6 +472,48 @@ document.addEventListener('DOMContentLoaded', function() {
     <script src="assets.website-files.com/63c8b7248f2f5717d9614bb3/js/webflow.3b7288c64.js" type="text/javascript"></script>
   
    
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+    
+    var checkboxes = document.querySelectorAll('.grid_item .circle-input');
+    console.log('Found ' + checkboxes.length + ' checkboxes');
+    
+    checkboxes.forEach(function(checkbox) {
+      console.log('Adding change event listener to:', checkbox.id);
+      
+      checkbox.addEventListener('change', function() {
+        console.log(this.id + ' checkbox state changed:', this.checked);
+        
+        var inputId = this.id.toLowerCase() + '_input';
+        var inputDiv = document.getElementById(inputId);
+        
+        if (inputDiv) {
+          console.log('Toggling display for:', inputId);
+          inputDiv.style.display = this.checked ? 'block' : 'none';
+  
+          // Shopify Website Checkbox
+          if (this.id === 'Shopify_Website' && this.checked) {
+            document.getElementById('budget').required = true;
+          } else if (this.id === 'Shopify_Website') {
+            document.getElementById('budget').required = false;
+          }
+  
+          // Marketing Checkbox
+          if (this.id === 'Marketing' && this.checked) { // Replace 'Marketing' with the actual ID of your marketing checkbox
+            document.getElementById('revenue-budget').required = true;
+          } else if (this.id === 'Marketing') {
+            document.getElementById('revenue-budget').required = false;
+          }
+        } else {
+          console.error('Element not found:', inputId);
+        }
+      });
+    });
+  });
+  
+    </script>
+  
 
     <script>
       const phoneInputField = document.querySelector("#phone");
