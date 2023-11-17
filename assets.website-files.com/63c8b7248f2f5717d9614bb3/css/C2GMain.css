@@ -4603,7 +4603,9 @@ figcaption {
   opacity: 1 !important;
   line-height: 1.2;
 }
-
+.story{
+  font-weight: 400 !important;
+}
 .heading-style-h1.services {
   color: #000;
   letter-spacing: -3px;
