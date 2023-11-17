@@ -457,42 +457,45 @@
 
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM fully loaded and parsed');
-    
-    var checkboxes = document.querySelectorAll('.grid_item .circle-input');
-    console.log('Found ' + checkboxes.length + ' checkboxes');
-    
-    checkboxes.forEach(function(checkbox) {
-      console.log('Adding change event listener to:', checkbox.id);
-      
-      checkbox.addEventListener('change', function() {
-        console.log(this.id + ' checkbox state changed:', this.checked);
-        
-        var inputId = this.id.toLowerCase() + '_input';
-        var inputDiv = document.getElementById(inputId);
-        
-        if (inputDiv) {
-          console.log('Toggling display for:', inputId);
-          inputDiv.style.display = this.checked ? 'block' : 'none';
-        } else {
-          console.error('Element not found:', inputId);
-        }
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM fully loaded and parsed');
   
-        // Handle the toggling of the span's visibility
-        var spanId = this.dataset.toggleSpan;
-        if (spanId) {
-          var span = document.getElementById(spanId);
-          if (span) {
-            console.log('Toggling visibility for:', spanId);
-            span.style.display = this.checked ? 'block' : 'none';
-          } else {
-            console.error('Span element not found:', spanId);
-          }
+  var checkboxes = document.querySelectorAll('.grid_item .circle-input');
+  console.log('Found ' + checkboxes.length + ' checkboxes');
+  
+  checkboxes.forEach(function(checkbox) {
+    console.log('Adding change event listener to:', checkbox.id);
+    
+    checkbox.addEventListener('change', function() {
+      console.log(this.id + ' checkbox state changed:', this.checked);
+      
+      var inputId = this.id.toLowerCase() + '_input';
+      var inputDiv = document.getElementById(inputId);
+      
+      if (inputDiv) {
+        console.log('Toggling display for:', inputId);
+        inputDiv.style.display = this.checked ? 'block' : 'none';
+
+        // Shopify Website Checkbox
+        if (this.id === 'Shopify_Website' && this.checked) {
+          document.getElementById('budget').required = true;
+        } else if (this.id === 'Shopify_Website') {
+          document.getElementById('budget').required = false;
         }
-      });
+
+        // Marketing Checkbox
+        if (this.id === 'Marketing' && this.checked) { // Replace 'Marketing' with the actual ID of your marketing checkbox
+          document.getElementById('revenue-budget').required = true;
+        } else if (this.id === 'Marketing') {
+          document.getElementById('revenue-budget').required = false;
+        }
+      } else {
+        console.error('Element not found:', inputId);
+      }
     });
   });
+});
+
   </script>
 
 
@@ -653,6 +656,7 @@ formContainer.style.display = 'block'; // Use 'block', 'flex', 'grid' etc., depe
   document.addEventListener("DOMContentLoaded", function() {
 const form = document.getElementById("wf-form-General-Contact-Form");
 const formContainer = document.querySelector(".form-container");
+const main_form = document.querySelector(".contact6_form")
 
 form.addEventListener("submit", function(event) {
 event.preventDefault(); // Prevent the default form submission
@@ -678,6 +682,7 @@ console.error('Error:', error);
 // Show the form container or a loading indicator
 formContainer.style.display = "block";
 formContainer.style.visibility = "visible";
+main_form.style.display = "none"
 });
 
 
