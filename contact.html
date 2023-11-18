@@ -336,8 +336,7 @@
             <div class = "circle-gradient"></div>
             <div class = "second-gradient "></div>
   
-            <div class="close-btn" onclick="closeForm()">X</div>
-            <div class = "form-contents">
+            Please include as much information as possible so our team can asses your inquiry to the best of our ability before our meeting            <div class = "form-contents">
                 <div class="animation-wrapper">
                   <img src="assets.website-files.com\Images\Logos\Asset 2PERFECTLOG.svg" loading="lazy" alt="" class="navbar22_logo desktop" />
                 </div>
@@ -672,12 +671,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // Check if the checkbox ID is 'Shopify_Website' (replace with the actual ID of your checkbox)
         if (this.id === 'shopify_solutions') { // Corrected ID
             const budgetSelect = document.getElementById('budget');
+            const shopifyReferenceSpan = document.getElementById('shopify-reference-span');
             if (budgetSelect) {
               budgetSelect.required = this.checked;
               console.log('Budget field required state set to:', budgetSelect.required);
             } else {
               console.error('Budget select element not found');
             }
+
+                // Toggle the display of the Shopify reference span
+          if (shopifyReferenceSpan) {
+            shopifyReferenceSpan.style.display = this.checked ? 'block' : 'none';
+          } else {
+            console.error('Shopify reference span element not found');
+          }
           }
 
           if (this.id === 'marketing') { // Added condition for the marketing checkbox
