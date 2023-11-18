@@ -312,7 +312,7 @@
 
 
                       <div style = "margin-top: 1.5rem;" class="form-field-wrapper"><label for="Contact-6-Message" class="field-label">More Information:</label>
-                        <span style = "cursor: default;" for="Contact-6-Checkbox" class="form-checkbox-label text-size-small w-form-label">Please include as much information as possible so our team can asses your inquiry to the best of our ability before our meeting</span></span>
+                        <span style = "cursor: default;" for="Contact-6-Checkbox" class="form-checkbox-label text-size-small w-form-label shopify-reference-span">Please include as much information as possible so our team can asses your inquiry to the best of our ability before our meeting</span></span>
                       
                         <span id="shopify-reference-span" style="cursor: default; display: none;" class="form-checkbox-label text-size-small w-form-label">
                           If you have any references in mind for your website or websites that you'd like similar to yours please include below
@@ -615,6 +615,7 @@ formContainer.style.display = 'block'; // Use 'block', 'flex', 'grid' etc., depe
 const form = document.getElementById("wf-form-General-Contact-Form");
 const formContainer = document.querySelector(".form-container");
 const main_form = document.querySelector(".contact6_form")
+const shopifyReferenceSpan = document.querySelector(".shopify-reference-span")
 
 form.addEventListener("submit", function(event) {
 event.preventDefault(); // Prevent the default form submission
@@ -641,9 +642,10 @@ console.error('Error:', error);
 formContainer.style.display = "block";
 formContainer.style.visibility = "visible";
 main_form.style.display = "none"
+shopifyReferenceSpan.display = "none"
 });
 
-
+C
 });
 
 </script>
