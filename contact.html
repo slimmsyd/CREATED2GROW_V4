@@ -670,18 +670,33 @@ document.addEventListener('DOMContentLoaded', function() {
         inputDiv.style.display = this.checked ? 'block' : 'none';
 
         // Check if the checkbox ID is 'Shopify_Website' (replace with the actual ID of your checkbox)
-        if (this.id === 'shopify_solutions_input') { // Replace with the actual ID of your Shopify Website checkbox
-          const budgetSelect = document.getElementById('budget');
-          if (budgetSelect) {
-            budgetSelect.required = this.checked;
-            console.log('Budget field required state set to:', budgetSelect.required);
-          } else {
-            console.error('Budget select element not found');
+        if (this.id === 'shopify_solutions') { // Corrected ID
+            const budgetSelect = document.getElementById('budget');
+            if (budgetSelect) {
+              budgetSelect.required = this.checked;
+              console.log('Budget field required state set to:', budgetSelect.required);
+            } else {
+              console.error('Budget select element not found');
+            }
           }
-        }
-      } else {
+
+          if (this.id === 'marketing') { // Added condition for the marketing checkbox
+            const revenueBudgetSelect = document.getElementById('revenue-budget');
+            if (revenueBudgetSelect) {
+              revenueBudgetSelect.required = this.checked;
+              console.log('Revenue Budget field required state set to:', revenueBudgetSelect.required);
+            } else {
+              console.error('Revenue Budget select element not found');
+            }
+          }
+                } 
+                
+                else {
         console.error('Element not found:', inputId);
       }
+
+
+
     });
   });
 });
