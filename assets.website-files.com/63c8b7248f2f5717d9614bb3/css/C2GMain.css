@@ -329,6 +329,7 @@ body:hover .cursor {
     .form-wrapper{
         padding: 8% !important;
         height: 495px  !important;
+        width:  100% !important;
     }
     .header36_image{
       transform: translate(0px,0px) !important;
@@ -351,6 +352,7 @@ z-index: 10;
 #form-header{
     margin: 0;
     font-size: 55px;
+    text-transform:  uppercase;
 }
 #formSub{
     font-size: 14px;
